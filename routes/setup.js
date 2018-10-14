@@ -28,6 +28,7 @@ module.exports = function(app){
 
         });
         
+        
 
         var categoryData = [
             {
@@ -43,15 +44,13 @@ module.exports = function(app){
 
             res.send(result);
 
-        });
-        
-
+        });        
         var appsData = [
             {
                 package_id: 'test_package',
-                category_id: "5bbf6869c57a5c6eb65cc7bc",
-                user_id : "5bbf678840f69a6d108985dc",
-                title : 'Cricket Game',
+                category_id: "5bc10d464ad7012a756817a8",
+                user_id : "5bc10d1d31ff4b29ef26777a",
+                title : 'Cricket Game 3',
                 short_description : 'This is cricket game',
                 description : 'Cricket is a bat and ball game!!!!!!!!',
                 version : 1,
@@ -63,9 +62,107 @@ module.exports = function(app){
             },
             {
                 package_id: 'test_package',
-                category_id: "5bbf6869c57a5c6eb65cc7bc",
-                user_id : "5bbf678840f69a6d108985dc",
-                title : 'Football Game',
+                category_id: "5bc10d464ad7012a756817a8",
+                user_id : "5bc10d1d31ff4b29ef26777a",
+                title : 'Football Game 4',
+                short_description : 'This is footbal game',
+                description : 'foot ball is a real game',
+                version : 1,
+                url : 'http://fifa.com.pk',
+                playstore_url : 'http://fifa.play.com',
+                status: true,
+                special: true,
+                featured: true,
+            },
+            {
+                package_id: 'test_package',
+                category_id: "5bc10d464ad7012a756817a8",
+                user_id : "5bc10d1d31ff4b29ef26777a",
+                title : 'Football Game 5',
+                short_description : 'This is footbal game',
+                description : 'foot ball is a real game',
+                version : 1,
+                url : 'http://fifa.com.pk',
+                playstore_url : 'http://fifa.play.com',
+                status: true,
+                special: true,
+                featured: true,
+            },
+            {
+                package_id: 'test_package',
+                category_id: "5bc10d464ad7012a756817a8",
+                user_id : "5bc10d1d31ff4b29ef26777a",
+                title : 'Football Game 6',
+                short_description : 'This is footbal game',
+                description : 'foot ball is a real game',
+                version : 1,
+                url : 'http://fifa.com.pk',
+                playstore_url : 'http://fifa.play.com',
+                status: true,
+                special: true,
+                featured: true,
+            },
+            {
+                package_id: 'test_package',
+                category_id: "5bc10d464ad7012a756817a8",
+                user_id : "5bc10d1d31ff4b29ef26777a",
+                title : 'Football Game 7',
+                short_description : 'This is footbal game',
+                description : 'foot ball is a real game',
+                version : 1,
+                url : 'http://fifa.com.pk',
+                playstore_url : 'http://fifa.play.com',
+                status: true,
+                special: true,
+                featured: true,
+            },
+            {
+                package_id: 'test_package',
+                category_id: "5bc10d464ad7012a756817a8",
+                user_id : "5bc10d1d31ff4b29ef26777a",
+                title : 'Football Game 8',
+                short_description : 'This is footbal game',
+                description : 'foot ball is a real game',
+                version : 1,
+                url : 'http://fifa.com.pk',
+                playstore_url : 'http://fifa.play.com',
+                status: true,
+                special: true,
+                featured: true,
+            },
+            {
+                package_id: 'test_package',
+                category_id: "5bc10d464ad7012a756817a8",
+                user_id : "5bc10d1d31ff4b29ef26777a",
+                title : 'Football Game 9',
+                short_description : 'This is footbal game',
+                description : 'foot ball is a real game',
+                version : 1,
+                url : 'http://fifa.com.pk',
+                playstore_url : 'http://fifa.play.com',
+                status: true,
+                special: true,
+                featured: true,
+            },
+            {
+                package_id: 'test_package',
+                category_id: "5bc10d464ad7012a756817a8",
+                user_id : "5bc10d1d31ff4b29ef26777a",
+                title : 'Football Game 10',
+                short_description : 'This is footbal game',
+                description : 'foot ball is a real game',
+                version : 1,
+                url : 'http://fifa.com.pk',
+                playstore_url : 'http://fifa.play.com',
+                status: true,
+                special: true,
+                featured: true,
+            },
+            {
+                package_id: 'test_package',
+                category_id: "5bc10d464ad7012a756817a8",
+                user_id : "5bc10d1d31ff4b29ef26777a",
+                title : 'Football Game 11',
                 short_description : 'This is footbal game',
                 description : 'foot ball is a real game',
                 version : 1,
@@ -75,6 +172,7 @@ module.exports = function(app){
                 special: true,
                 featured: true,
             }
+
         ];
         
         applicationModel.create(appsData,function(err,result){
@@ -85,7 +183,7 @@ module.exports = function(app){
 
         });
         */
-        
+                
 
     });
 

@@ -2,10 +2,19 @@
 <html>
   <head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/bootstrap/bootstrap.min.css' />
+    <link rel='stylesheet' href='/stylesheets/bootstrap/bootstrap.min.css' />    
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <%- include(view) -%>
+    <div class="container">
+      <%- include('header.ejs') -%>
+
+      <%- include(view) -%>
+
+      <%- include('footer') -%>
+  </div>
+  
+  <script type="text/javascript" src='/js/jquery-3.3.1.min.js'></script>
+  <script type="text/javascript" src='/js/bootstrap/bootstrap.min.js'></script>
   </body>
 </html>
