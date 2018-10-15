@@ -4,6 +4,9 @@ var router = express.Router();
 var applicationController = require('../admin/applicationController');
 
 /* applications list get. */
+router.get('/application/', applicationController.application_list);
+
+/* applications list get. */
 router.get('/application/list/:page*?', applicationController.application_list);
 
 /* create application */

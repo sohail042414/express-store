@@ -41,10 +41,10 @@ module.exports.applicatin_get = function(req, res) {
 module.exports.application_update_put = function(req, res) {    
     
     postedData = {
-        "status": req.body.status,
-        "special": req.body.special,
-        "featured": req.body.featured,
-        "package_id": req.body.special,
+        "status": req.body.status ? true : false,
+        "special": req.body.special ? true: false,
+        "featured": req.body.featured ? true : false,
+        "package_id": req.body.package_id,
         "category_id": "5bc10d464ad7012a756817a8",
         "user_id": "5bc10d1d31ff4b29ef26777a",
         "title": req.body.title,
@@ -57,8 +57,6 @@ module.exports.application_update_put = function(req, res) {
     
     applicationModel.findByIdAndUpdate(req.body.id,postedData,function(err,savedApp){
 
-        if(err) throw err;
-
         res.send({status:"Success", app:savedApp});
     });
 
@@ -68,6 +66,9 @@ module.exports.application_update_put = function(req, res) {
 /*save application data post*/
 module.exports.applicatin_create_post = function(req, res) {    
     
+    console.log(req.body);
+    res.send({status:"Success",data: req.body});
+ 
     postedData = {
         "status": req.body.status,
         "special": req.body.special,
