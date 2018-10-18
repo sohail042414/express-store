@@ -1,48 +1,48 @@
 <form id="app-form" method="POST">
     <div class="form-group">
         <label for="title">Title</label>
-        <input type="text" class="form-control" id="title" placeholder="app title">
+        <input type="text" value="<%= application.title %>" class="form-control" id="title" placeholder="app title">
         <small id="" class="form-text text-muted">should be unique...</small>
     </div>
 
     <div class="form-group">
         <label for="short_description">Short Description</label>
-        <input type="text" class="form-control" id="short_description" placeholder="shrot description">            
+        <input value="<%= application.short_description %>" type="text" class="form-control" id="short_description" placeholder="shrot description">
     </div>
 
     <div class="form-group">
         <label for="description"> Description</label>
-        <input type="text" class="form-control" id="description" placeholder="description">            
+        <input value="<%= application.description %>" type="text" class="form-control" id="description" placeholder="description">
     </div>
 
     <div class="form-group">
         <label for="package_id"> Package id</label>
-        <input type="text" class="form-control" id="package_id" placeholder="package d">            
+        <input value="<%= application.package_id %>" type="text" class="form-control" id="package_id" placeholder="package d">
     </div>
 
     <div class="form-group">
         <label for="url">Url/Website</label>
-        <input type="text" class="form-control" id="url" placeholder="url">            
+        <input value="<%= application.url %>" type="text" class="form-control" id="url" placeholder="url">
         <small id="emailHelp" class="form-text text-muted">Website url or application...</small>
     </div>
 
     <div class="form-group">
         <label for="playstore_url">Playstore Url</label>
-        <input type="text" class="form-control" id="playstore_url" placeholder="playstore url">            
+        <input value="<%= application.playstore_url %>" type="text" class="form-control" id="playstore_url" placeholder="playstore url">
     </div>
 
     <div class="form-group form-check">
-        <input name="status" value="1" type="checkbox" class="form-check-input" id="status">
+        <input checked="<%= application.status %>" name="status" value="1" type="checkbox" class="form-check-input" id="status">
         <label class="form-check-label" for="exampleCheck1">Status(Active)</label>
     </div>
 
     <div class="form-group form-check">
-        <input name="special" value="1" type="checkbox" class="form-check-input" id="special">
+        <input checked="<%= application.special %>" name="special" value="1" type="checkbox" class="form-check-input" id="special">
         <label class="form-check-label" for="exampleCheck1">Special</label>
     </div>
 
     <div class="form-group form-check">
-        <input name="featured" value="1" type="checkbox" class="form-check-input" id="featured">
+        <input checked="<%= application.featured %>" name="featured" value="1" type="checkbox" class="form-check-input" id="featured">
         <label class="form-check-label" for="exampleCheck1">Featured</label>
     </div>
 

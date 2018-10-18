@@ -1,0 +1,74 @@
+<div class="row" style="margin-top:30px;">
+
+    <div class="col-lg-2 col-md-2 col-sm-12">
+        <%- include('../sidebar.ejs') -%>
+    </div>
+
+    <div class="col-lg-6 col-md-6 col-sm-12">
+        <br>
+        <h3>
+            <%= title %>
+        </h3>
+        <br>
+        <table class="table table-condensed">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>
+                        <%= application.title %>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Short Description</td>
+                    <td>
+                        <%= application.short_description %>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Description</td>
+                    <td>
+                        <%= application.description %>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Version</td>
+                    <td>
+                        <%= application.version %>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Url</td>
+                    <td>
+                        <%= application.url %>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Playstore</td>
+                    <td>
+                        <%= application.playstore_url %>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Featured</td>
+                    <td>
+                        <%= (application.featured)?'Yes':'No' %>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Status</td>
+                    <td>
+                        <%= (application.status)?'Active':'Disabled' %>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Special</td>
+                    <td>
+                        <%= (application.special)?'Yes':'No' %>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,52 @@
+
+<div class="row" style="margin-top:30px;">
+
+    <div class="col-lg-2 col-md-2 col-sm-12">
+            <%- include('../sidebar.ejs') -%>
+    </div>
+
+    <div class="col-lg-6 col-md-6 col-sm-12">
+        <br>
+        <h3><%= title %></h3>       
+        <%- include('app_form.ejs') -%>
+    </div>
+
+    <div class="col-lg-4 col-md-4 col-sm-12">
+        <div id="error-box">
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" >
+
+    //console.log('<%= application.id %>');
+
+    $('#app-form').submit(function(event){
+
+        event.preventDefault();
+
+        appData = parepareAppForm();
+        appData.id = '<%= application.id %>';
+   
+        $.ajax({
+            url : '/api/application',
+            type: 'PUT',
+            dataType : 'json',
+            data : appData,
+            success : function(data){
+                                
+                if(data.status){
+                    location.href= '/admin/application/view/'+data.application._id;
+                }else{
+                    $('#error-box').html('');
+                    $('#error-box').html('<h2>Please fix errors!</h2>');
+                    $.each(data.errors,function(index,err){
+                         $('#error-box').append('<div class="alert alert-danger">'+err.message+'</div>');
+                    });
+                }
+                
+            }
+        });
+        
+    });
+</script>

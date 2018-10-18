@@ -54,10 +54,14 @@ module.exports.application_update_put = function(req, res) {
         "url": req.body.url,
         "playstore_url": req.body.playstore_url
     };
-    
+
     applicationModel.findByIdAndUpdate(req.body.id,postedData,function(err,savedApp){
 
-        res.send({status:"Success", app:savedApp});
+        if(err){
+            throw err;
+        }
+
+        res.send({status:true, application:savedApp});
     });
 
     //res.send({response:" application put data",test : "testing again"});
@@ -66,8 +70,8 @@ module.exports.application_update_put = function(req, res) {
 /*save application data post*/
 module.exports.applicatin_create_post = function(req, res) {    
     
-    console.log(req.body);
-    res.send({status:"Success",data: req.body});
+    // console.log(req.body);
+    // res.send({status:"Success",data: req.body});
  
     postedData = {
         "status": req.body.status,
@@ -86,9 +90,12 @@ module.exports.applicatin_create_post = function(req, res) {
 
     applicationModel.create(postedData,function(err,savedApp){
 
-        if(err) throw err;
-
-        res.send({status:"Success",app: savedApp});
+        if(err){
+            //console.log(err);
+            res.send({status:false,'errors': err.errors});
+        }else{
+            res.send({status:true,application: savedApp});
+        }
 
     });
     
