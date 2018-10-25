@@ -1,11 +1,14 @@
 var applicationModel = require('../models/applicationModel');
 var userModel = require('../models/userModel');
 var categoryModel = require('../models/categoryModel');
+var testingModel = require('../models/testingModel');
 
 module.exports = function(app){
 
     app.get('/api/setup',function(req,res){
 
+
+        testingModel.runTest();
         res.send({test: 'setup already done'});
 
         /*
